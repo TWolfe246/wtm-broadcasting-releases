@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WTM Broadcasting — live iRacing broadcast production suite. Custom OBS overlays, race control, and timing tower for sim racing leagues." />
+  <title>WTM Broadcasting — Live iRacing Broadcast Production</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <span class="nav-brand-mark">●</span>
+        <span class="nav-brand-text">WTM Broadcasting</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-accent btn-small" href="#pricing">Subscribe</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">For sim racing broadcasters</span>
+      <h1 class="hero-title">
+        Run a full iRacing broadcast<br />
+        <span class="hero-title-accent">from one window.</span>
+      </h1>
+      <p class="hero-sub">
+        Custom OBS overlays, timing tower, pit reporting, race control, and replay
+        camera switching — driven by a single desktop app that talks to iRacing for you.
+        No SDK profiles. No OBS Interact during a live race.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-large" href="#pricing">Get started</a>
+        <a class="btn btn-ghost btn-large" href="#how">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-meta-item"><span class="hero-meta-dot ok"></span> Live composite-timing engine</span>
+        <span class="hero-meta-item"><span class="hero-meta-dot ok"></span> Auto-updating launcher</span>
+        <span class="hero-meta-item"><span class="hero-meta-dot ok"></span> Windows · iRacing · OBS 30+</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / LOGOS PLACEHOLDER -->
+  <section class="section-proof">
+    <div class="container">
+      <p class="proof-label">Built for broadcasters who run full-season league coverage</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-eyebrow">Features</h2>
+      <h3 class="section-title">Every overlay you need, controlled from one app.</h3>
+      <p class="section-lede">
+        Designed by an active broadcaster for the things that actually matter on race night.
+        Overlays render directly in OBS as browser sources. The launcher handles state,
+        timing, and graphics so you can focus on the call.
+      </p>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">▤</div>
+          <h4 class="feature-title">Timing Tower</h4>
+          <p class="feature-desc">
+            Composite-timing leaderboard with gap, interval, pit lap, and live speed.
+            Lap-down detection that works mid-track, not just at start/finish.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◳</div>
+          <h4 class="feature-title">Starting Grid</h4>
+          <p class="feature-desc">
+            Two-column grid with custom car numbers, helmets, and qualifying times.
+            Slides in from the bottom when you're ready, hides on the way out of pace.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">▶</div>
+          <h4 class="feature-title">Stage &amp; Race Results</h4>
+          <p class="feature-desc">
+            Auto-pop stage results at the stage boundary. Unofficial Race Results with
+            full points breakdown the moment the checkered drops.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⛽</div>
+          <h4 class="feature-title">Pit Report</h4>
+          <p class="feature-desc">
+            Gain/loss panel that latches when cars exit pit lane. Tire stop detection,
+            stall time, tow filtering, speeding-penalty handling. Caution-aware only.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◉</div>
+          <h4 class="feature-title">Driver Info &amp; Stats</h4>
+          <p class="feature-desc">
+            Focused-driver lower third + season stats drawer (starts, wins, top-5,
+            avg finish, points). Sourced from your league standings, updated each race.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⌖</div>
+          <h4 class="feature-title">Replay &amp; Camera Control</h4>
+          <p class="feature-desc">
+            Full replay transport (slow-mo, frame step, scrub) and one-click camera
+            focus on any driver. Camera profiles per track. No SDK profile required.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◍</div>
+          <h4 class="feature-title">Event Viewer</h4>
+          <p class="feature-desc">
+            Clickable log of every overtake, off-track, crash, and flag change.
+            One click jumps iRacing's replay to that moment with the camera on the car.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">↻</div>
+          <h4 class="feature-title">OBS Refresh</h4>
+          <p class="feature-desc">
+            One button refreshes every browser source in every scene. No more
+            Tools menu fishing during a stop set. Works through OBS WebSocket.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section section-alt">
+    <div class="container">
+      <h2 class="section-eyebrow">How it works</h2>
+      <h3 class="section-title">From iRacing to OBS in three pieces.</h3>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-num">01</span>
+          <h4 class="step-title">Launcher reads iRacing</h4>
+          <p class="step-desc">
+            The desktop launcher boots a bundled server that reads iRacing's shared
+            memory at 20Hz. No SDK profiles to maintain. No extra installs.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-num">02</span>
+          <h4 class="step-title">Overlays render in OBS</h4>
+          <p class="step-desc">
+            Each overlay is a browser source pointed at the launcher's local server.
+            Add once, leave them in your scene. They turn on and off via the app.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-num">03</span>
+          <h4 class="step-title">You run the broadcast</h4>
+          <p class="step-desc">
+            Race Control tab handles flags, stages, replays, cameras, audio — all
+            without alt-tabbing. Hotkeys for everything. The launcher is the show.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="section-eyebrow">Pricing</h2>
+      <h3 class="section-title">Simple subscription. Cancel anytime.</h3>
+
+      <div class="pricing-card">
+        <div class="pricing-card-head">
+          <span class="pricing-tier">League Broadcaster</span>
+          <div class="pricing-price">
+            <span class="pricing-price-currency">$</span>
+            <span class="pricing-price-amount">TBD</span>
+            <span class="pricing-price-period">/ month</span>
+          </div>
+          <p class="pricing-sub">Everything in the app. One activation per machine.</p>
+        </div>
+
+        <ul class="pricing-features">
+          <li>All overlays included</li>
+          <li>Auto-updates as features ship</li>
+          <li>Run on one PC at a time (move freely between machines)</li>
+          <li>Email support</li>
+          <li>Cancel anytime — keep the version installed when you cancel</li>
+        </ul>
+
+        <a class="btn btn-accent btn-large pricing-cta" href="#">
+          Subscribe (coming soon)
+        </a>
+        <p class="pricing-foot">
+          Final pricing posted when subscriptions go live. Want to be first?
+          <a href="mailto:hello@wtmbroadcasting.com">Email me</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-eyebrow">Requirements</h2>
+      <h3 class="section-title">What you need to run the app.</h3>
+
+      <div class="req-grid">
+        <div class="req-card">
+          <span class="req-label">Required</span>
+          <ul>
+            <li>Windows 10 / 11 (64-bit)</li>
+            <li>iRacing (active subscription)</li>
+            <li>OBS Studio 30+ with the WebSocket server enabled</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <span class="req-label">Not required</span>
+          <ul>
+            <li>No Python install needed</li>
+            <li>No SDK profile setup</li>
+            <li>No OBS Interact mode during broadcast</li>
+            <li>No additional iRacing telemetry tool</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-eyebrow">FAQ</h2>
+      <h3 class="section-title">Common questions.</h3>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Does this work with my OBS scene collection?</summary>
+          <p>
+            Yes. Each overlay is a regular OBS browser source you add to whatever
+            scenes you want. You set it up once and leave it. The launcher controls
+            visibility from the app, so you don't need to switch scenes by hand.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I use my own branding / logos / colors?</summary>
+          <p>
+            Yes. Drop your league logo into the branding folder; it shows on the
+            standings and results overlays automatically. Custom car number images
+            and helmet liveries are supported.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if my internet drops during a race?</summary>
+          <p>
+            Everything runs locally. The launcher talks to iRacing on your machine
+            and serves overlays to OBS on your machine. Internet is only needed for
+            optional features like the season-standings scraper and license checks.
+            License has a 7-day offline grace period — you'll never lose access mid-broadcast.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How are updates handled?</summary>
+          <p>
+            The launcher checks for updates in the background. When a new version
+            is ready, you'll see a banner with release notes. Click "Restart now"
+            or just relaunch the app later — it installs automatically. No reinstalls.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I move my license to a different PC?</summary>
+          <p>
+            Yes. In the app's Setup tab, click "Release this machine," then activate
+            on the new PC with the same key. One active machine per license at a time.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does it work with other sims (rFactor, ACC, etc.)?</summary>
+          <p>
+            iRacing only, at least for now. The composite timing engine is built
+            against iRacing's shared memory format.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-cta">
+    <div class="container">
+      <h2 class="section-cta-title">Ready to upgrade your broadcast?</h2>
+      <p class="section-cta-sub">
+        Subscribe and start running cleaner shows on race night.
+      </p>
+      <a class="btn btn-accent btn-large" href="#pricing">Subscribe</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-brand-mark">●</span>
+        <span class="nav-brand-text">WTM Broadcasting</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@wtmbroadcasting.com">Contact</a>
+      </nav>
+      <p class="footer-fineprint">
+        © 2026 WTM Broadcasting. Not affiliated with iRacing or OBS Studio.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

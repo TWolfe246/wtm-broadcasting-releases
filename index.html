@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WTM Broadcasting — desktop app that runs an iRacing league broadcast: timing tower, pit reports, replay control, OBS-driven overlays." />
+  <meta name="description" content="WTM Broadcasting. Desktop app for running an iRacing league broadcast. Timing tower, pit reports, replay control, OBS overlays." />
   <title>WTM Broadcasting</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -21,13 +21,14 @@
     <section class="hero">
       <h1>An iRacing broadcast tool<br />that doesn't make you alt-tab.</h1>
       <p>
-        I run a sim racing league. This is the desktop app I built so race night
-        runs out of one window — timing tower, pit reports, stage and finish
-        results, replay control, camera focus, audio cues. Overlays render as
-        OBS browser sources. Setup is one click; control is one screen.
+        I run a sim racing league and got tired of jumping between five windows
+        every race night. So I built this. Timing tower, pit report, results,
+        replay control, camera focus, audio cues. All in one app. Overlays render
+        as OBS browser sources. You set them up in OBS once and don't touch it
+        again during the race.
       </p>
       <p class="hero-meta">
-        Windows 10/11 · iRacing · OBS Studio 30+ · brings its own bundled Python servers
+        Windows 10/11. iRacing. OBS Studio 30+. No Python install needed.
       </p>
     </section>
 
@@ -35,43 +36,42 @@
       <h2>What's in it</h2>
       <dl>
         <dt>Timing tower</dt>
-        <dd>Composite-timing leaderboard. Lap-down detection that works mid-track. Tower data column swaps between gap, interval, manufacturer, gain/loss, last lap, last pit, speed, best.</dd>
+        <dd>Live leaderboard. The right column swaps to whatever you want shown: gap, interval, manufacturer logo, gain/loss, last lap, last pit, current speed, best lap. Lap-down detection actually works when cars are mid-track, not just at start/finish.</dd>
 
         <dt>Starting grid</dt>
-        <dd>Two-column grid with custom car numbers, helmets, qualifying times. Falls back to driver list when there's no qual.</dd>
+        <dd>Two columns of car numbers, helmets, qual times. Slides up from the bottom on the parade lap. Falls back to the driver list if there's no qualifying session.</dd>
 
-        <dt>Stage &amp; race results</dt>
-        <dd>Auto-pops stage results at the stage boundary. Race results overlay with full stage + finish + bonus points breakdown the moment the checkered drops.</dd>
+        <dt>Stage and race results</dt>
+        <dd>Stage results pop up automatically at the end of each stage. Final race results show up the moment the checkered drops, with stage points, finish points, and bonus points already added up.</dd>
 
         <dt>Pit report</dt>
-        <dd>Latches when cars exit pit lane. Stall time, gain/loss in positions, tire stop detection (2T/4T heuristic), tow filtering, speeding-penalty handling. Only shows under caution.</dd>
+        <dd>When a car exits pit lane it locks in: stall time, positions gained or lost, 2 tire vs 4 tire stop. Tow-ins and speeding penalties get handled correctly. Only shows under caution, because nobody wants this graphic up under green.</dd>
 
-        <dt>Driver info &amp; stats</dt>
-        <dd>Focused-driver lower third. Season stats drawer (starts, wins, top-5, avg finish, points, incidents) sourced from your league standings.</dd>
+        <dt>Driver info and stats</dt>
+        <dd>Lower third for whichever driver the camera is on. Slide-in stats drawer with their season starts, wins, top-5s, average finish, points, and incidents. Pulled from your league standings.</dd>
 
-        <dt>Replay &amp; camera control</dt>
-        <dd>Transport controls (slow-mo 1/2 → 1/16, frame step, scrub, rewind, jump-to-live). One-click camera focus on any driver. Saved camera-group profiles per track.</dd>
+        <dt>Replay and camera control</dt>
+        <dd>Slow-mo from 1/2 down to 1/16. Frame-by-frame stepping, scrub, rewind, jump back to live. Click any driver in the launcher to switch the iRacing camera to them. Save your camera setups per track so you don't redo them every week.</dd>
 
         <dt>Event viewer</dt>
-        <dd>Running log of overtakes, off-tracks, crashes, flag changes. Click a row to jump iRacing's replay to that moment with the camera on the involved car.</dd>
+        <dd>Live log of every overtake, off-track, crash, and flag change. Click a row and iRacing's replay jumps to that moment with the camera already on the car that caused it.</dd>
 
         <dt>OBS refresh</dt>
-        <dd>One button refreshes every browser source in every scene via OBS WebSocket. No more digging in Tools menu during a stop set.</dd>
+        <dd>One button refreshes every browser source in every scene. No more digging through OBS menus when an overlay glitches mid-broadcast.</dd>
 
         <dt>Race history</dt>
-        <dd>Auto-saves each broadcast's results, stage points, laps led, fastest lap. Browse, tag, and delete past races without leaving the app.</dd>
+        <dd>Every race you broadcast gets saved automatically. Results, stage points, laps led, fastest lap. Browse them later, tag them, delete the ones you don't want.</dd>
       </dl>
     </section>
 
     <section class="architecture">
-      <h2>How it fits together</h2>
+      <h2>How it actually works</h2>
       <p>
-        The launcher boots a bundled Python server that reads iRacing's shared
-        memory at 20Hz and broadcasts the live state over WebSocket. Each overlay
-        is a regular browser source pointed at <code>http://localhost:9212</code>.
-        You add the sources to your OBS scene once and leave them there — the
-        launcher controls visibility via config writes. There's no SDK profile
-        to maintain, no OBS Interact mode required during the broadcast.
+        The launcher runs a small Python server that reads iRacing's shared memory
+        20 times a second. Overlays are just browser sources pointed at
+        <code>http://localhost:9212</code>. You set them up in OBS once, leave
+        them there. The app handles when each overlay shows and when it hides.
+        No SDK profile to maintain. No OBS Interact mode needed during the race.
       </p>
     </section>
 
@@ -80,39 +80,39 @@
       <div class="pricing-card">
         <p class="price">$<span class="price-amount">TBD</span> <span class="price-period">/ month</span></p>
         <ul>
-          <li>Everything in the app, no tiered features</li>
-          <li>Runs on one machine at a time, freely transferable between PCs</li>
-          <li>Auto-updates as features and fixes ship</li>
-          <li>Email support from the person who built it</li>
+          <li>Everything in the app. No tiers, no upsells.</li>
+          <li>One PC at a time. Move it to a different one whenever you want.</li>
+          <li>Updates automatically when I ship them.</li>
+          <li>Email me if anything breaks. I'm the one who built it.</li>
         </ul>
         <a href="#" class="cta-button">Subscribe (coming soon)</a>
         <p class="pricing-aside">
-          Pricing posts when subscriptions go live. To be first in line,
+          Pricing isn't posted yet. If you want a heads up when it goes live,
           <a href="mailto:hello@wtmbroadcasting.com">email me</a>.
         </p>
       </div>
     </section>
 
     <section class="faq">
-      <h2>Things people ask before they buy</h2>
+      <h2>Things people ask</h2>
 
       <h3>Does it work with my existing OBS scenes?</h3>
-      <p>Yes. You add each overlay as a regular browser source pointed at the launcher. You can put them in any scene collection, scene, or group. The launcher toggles visibility from the app side, so you're not constantly switching scenes.</p>
+      <p>Yeah. Each overlay is just a browser source. Put them in whatever scenes you want, in any collection. The app controls when they show, so you're not switching scenes constantly.</p>
 
-      <h3>What happens if my internet drops mid-race?</h3>
-      <p>Almost nothing. The launcher talks to iRacing on your PC and serves overlays to OBS on your PC. Internet is only needed for the optional standings scraper and the periodic license re-check (which has a 7-day offline grace period — you will not get locked out during a broadcast).</p>
+      <h3>What if my internet drops during a race?</h3>
+      <p>Basically nothing happens. The whole thing runs on your PC, so iRacing and OBS keep talking to each other fine. The only stuff that needs internet is the standings scraper (which is optional anyway) and the periodic license check. The license has a 7-day offline buffer so you won't get locked out mid-broadcast.</p>
 
-      <h3>Can I use my own league branding?</h3>
-      <p>Yes. Logos, custom car number images, helmet liveries, and per-track camera presets all live in folders you control. Drop in your files; the overlays pick them up next session.</p>
+      <h3>Can I use my own branding?</h3>
+      <p>Yeah. Drop your league logo, custom car numbers, helmets, and camera presets into the folders the app shows you. Next session, they show up.</p>
 
       <h3>How do updates work?</h3>
-      <p>The launcher checks for updates in the background and shows a banner with release notes when a new version is ready. Click "Restart now" or just relaunch later — it installs in place.</p>
+      <p>The app checks for new versions in the background. When there's one, you get a banner with what changed. Hit "Restart now" or just quit and relaunch later. Either way, it installs itself.</p>
 
       <h3>Can I move my license to another PC?</h3>
-      <p>Yes. In the app, click "Release this machine," then activate on the new PC with the same key.</p>
+      <p>Yeah. Hit "Release this machine" in the app, then activate on the new PC with the same key. One PC at a time.</p>
 
-      <h3>Does it work with other sims (rFactor 2, ACC, AMS2)?</h3>
-      <p>No. iRacing only. The timing engine is built against iRacing's shared memory format.</p>
+      <h3>Does it work with other sims?</h3>
+      <p>No, iRacing only. The timing engine reads iRacing's shared memory directly. Other sims would need a full rewrite of that piece.</p>
     </section>
   </main>
 

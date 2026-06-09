@@ -91,6 +91,15 @@ code {
   text-decoration: none;
 }
 .brand:hover { text-decoration: none; color: var(--text); }
+.topbar-nav {
+  display: flex; align-items: center; gap: 22px;
+}
+.topbar-nav a {
+  color: var(--text-dim);
+  font-size: 13px;
+  text-decoration: none;
+}
+.topbar-nav a:hover { color: var(--accent); text-decoration: none; }
 .topbar-cta {
   color: var(--text-dim);
   font-size: 13px;

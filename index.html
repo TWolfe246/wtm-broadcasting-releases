@@ -7,82 +7,138 @@
   <title>WTM Broadcasting</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
 
   <header class="topbar">
-    <a href="#" class="brand">WTM Broadcasting</a>
+    <a href="#" class="brand">WTM<span class="brand-sep">/</span>BROADCASTING</a>
     <a class="topbar-cta" href="#pricing">Subscribe</a>
   </header>
 
   <main>
     <section class="hero">
-      <h1>An iRacing broadcast tool<br />that doesn't make you alt-tab.</h1>
-      <p>
-        I run a sim racing league and got tired of jumping between five windows
-        every race night. So I built this. Timing tower, pit report, results,
-        replay control, camera focus, audio cues. All in one app. Overlays render
-        as OBS browser sources. You set them up in OBS once and don't touch it
-        again during the race.
-      </p>
-      <p class="hero-meta">
-        Windows 10/11. iRacing. OBS Studio 30+. No Python install needed.
-      </p>
+      <div class="hero-copy">
+        <h1>Run the whole broadcast from one window.</h1>
+        <p>
+          I run a sim racing league and got tired of jumping between five windows
+          every race night. So I built this. Timing tower, pit report, results,
+          replay control, camera focus, audio cues. All in one app. Overlays render
+          as OBS browser sources. You set them up once and don't touch OBS again
+          during the race.
+        </p>
+        <div class="hero-actions">
+          <a class="cta-button" href="#pricing">Subscribe</a>
+          <a class="hero-secondary" href="#features">See what's in it</a>
+        </div>
+        <p class="hero-meta">WINDOWS 10/11 &nbsp;·&nbsp; IRACING &nbsp;·&nbsp; OBS STUDIO 30+ &nbsp;·&nbsp; NO PYTHON INSTALL</p>
+      </div>
+
+      <figure class="tower" aria-label="Timing tower overlay rendered by the app">
+        <div class="tower-head">
+          <span class="tower-title">MICHIGAN 300</span>
+          <span class="tower-live"><span class="tower-live-dot"></span>LAP 67<span class="tower-live-total">/110</span></span>
+        </div>
+        <ol class="tower-rows">
+          <li class="tower-row is-leader">
+            <span class="tower-pos">1</span><span class="tower-num">7</span>
+            <span class="tower-name">HOGGAN</span><span class="tower-gap">LEADER</span>
+          </li>
+          <li class="tower-row">
+            <span class="tower-pos">2</span><span class="tower-num">23</span>
+            <span class="tower-name">PATASKA</span><span class="tower-gap">-0.42</span>
+          </li>
+          <li class="tower-row">
+            <span class="tower-pos">3</span><span class="tower-num">88</span>
+            <span class="tower-name">GAREY</span><span class="tower-gap">-1.87</span>
+          </li>
+          <li class="tower-row">
+            <span class="tower-pos">4</span><span class="tower-num">46</span>
+            <span class="tower-name">WOLFE</span><span class="tower-gap">-2.93</span>
+          </li>
+          <li class="tower-row">
+            <span class="tower-pos">5</span><span class="tower-num">12</span>
+            <span class="tower-name">CARTER</span><span class="tower-gap">-5.11</span>
+          </li>
+        </ol>
+        <div class="tower-foot">
+          <span>STAGE 2</span>
+          <span>23 TO GO</span>
+        </div>
+        <figcaption>The timing tower, drawn by the app. Every overlay is a browser source in OBS.</figcaption>
+      </figure>
     </section>
 
-    <section class="features">
+    <div class="race-story" role="presentation"></div>
+
+    <section id="features" class="rundown">
       <h2>What's in it</h2>
-      <dl>
-        <dt>Timing tower</dt>
-        <dd>Live leaderboard. The right column swaps to whatever you want shown: gap, interval, manufacturer logo, gain/loss, last lap, last pit, current speed, best lap. Lap-down detection actually works when cars are mid-track, not just at start/finish.</dd>
-
-        <dt>Starting grid</dt>
-        <dd>Two columns of car numbers, helmets, qual times. Slides up from the bottom on the parade lap. Falls back to the driver list if there's no qualifying session.</dd>
-
-        <dt>Stage and race results</dt>
-        <dd>Stage results pop up automatically at the end of each stage. Final race results show up the moment the checkered drops, with stage points, finish points, and bonus points already added up.</dd>
-
-        <dt>Pit report</dt>
-        <dd>When a car exits pit lane it locks in: stall time, positions gained or lost, 2 tire vs 4 tire stop. Tow-ins and speeding penalties get handled correctly. Only shows under caution, because nobody wants this graphic up under green.</dd>
-
-        <dt>Driver info and stats</dt>
-        <dd>Lower third for whichever driver the camera is on. Slide-in stats drawer with their season starts, wins, top-5s, average finish, points, and incidents. Pulled from your league standings.</dd>
-
-        <dt>Replay and camera control</dt>
-        <dd>Slow-mo from 1/2 down to 1/16. Frame-by-frame stepping, scrub, rewind, jump back to live. Click any driver in the launcher to switch the iRacing camera to them. Save your camera setups per track so you don't redo them every week.</dd>
-
-        <dt>Event viewer</dt>
-        <dd>Live log of every overtake, off-track, crash, and flag change. Click a row and iRacing's replay jumps to that moment with the camera already on the car that caused it.</dd>
-
-        <dt>OBS refresh</dt>
-        <dd>One button refreshes every browser source in every scene. No more digging through OBS menus when an overlay glitches mid-broadcast.</dd>
-
-        <dt>Race history</dt>
-        <dd>Every race you broadcast gets saved automatically. Results, stage points, laps led, fastest lap. Browse them later, tag them, delete the ones you don't want.</dd>
-      </dl>
+      <ol class="rundown-list">
+        <li>
+          <span class="rundown-name">Timing tower</span>
+          <span class="rundown-desc">Live leaderboard. The data column swaps between gap, interval, manufacturer, gain/loss, last lap, last pit, speed, best. Lap-down detection that works mid-track, not just at the line.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Starting grid</span>
+          <span class="rundown-desc">Two columns of car numbers, helmets, qual times. Slides up on the parade lap. Falls back to the driver list if there's no qualifying session.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Stage and race results</span>
+          <span class="rundown-desc">Stage results pop automatically at each stage boundary. Final results show the moment the checkered drops, with stage, finish, and bonus points already added up.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Pit report</span>
+          <span class="rundown-desc">Locks in as cars exit pit lane: stall time, positions gained or lost, 2 tire vs 4 tire. Tow-ins and speeding penalties handled. Only shows under caution.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Driver info and stats</span>
+          <span class="rundown-desc">Lower third for whoever the camera is on, plus a season stats drawer: starts, wins, top 5s, average finish, points, incidents.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Replay and camera control</span>
+          <span class="rundown-desc">Slow-mo from 1/2 down to 1/16, frame stepping, jump to live. Click any driver to put the iRacing camera on them. Camera setups saved per track.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Event viewer</span>
+          <span class="rundown-desc">Running log of overtakes, off-tracks, crashes, flags. Click a row and the replay jumps to that moment with the camera already on the right car.</span>
+        </li>
+        <li>
+          <span class="rundown-name">OBS refresh</span>
+          <span class="rundown-desc">One button refreshes every browser source in every scene. No digging through OBS menus mid-broadcast.</span>
+        </li>
+        <li>
+          <span class="rundown-name">Race history</span>
+          <span class="rundown-desc">Every race saved automatically: results, stage points, laps led, fastest lap. Browse, tag, delete.</span>
+        </li>
+      </ol>
     </section>
 
     <section class="architecture">
       <h2>How it actually works</h2>
+      <pre class="flow" aria-label="Data flow">iRacing shared memory ──&gt; bundled server, 20Hz ──&gt; OBS browser sources
+                                   |
+                              the launcher</pre>
       <p>
-        The launcher runs a small Python server that reads iRacing's shared memory
-        20 times a second. Overlays are just browser sources pointed at
-        <code>http://localhost:9212</code>. You set them up in OBS once, leave
-        them there. The app handles when each overlay shows and when it hides.
-        No SDK profile to maintain. No OBS Interact mode needed during the race.
+        The launcher runs a small server that reads iRacing's shared memory 20
+        times a second. Overlays are just browser sources pointed at
+        <code>localhost</code>. You add them to your scenes once and leave them.
+        The app decides when each overlay shows. No SDK profile to maintain, no
+        OBS Interact mode during the race, and nothing depends on your internet
+        connection.
       </p>
     </section>
+
+    <div class="race-story race-story-alt" role="presentation"></div>
 
     <section id="pricing" class="pricing">
       <h2>Pricing</h2>
       <div class="pricing-card">
-        <p class="price">$<span class="price-amount">TBD</span> <span class="price-period">/ month</span></p>
+        <p class="price"><span class="price-currency">$</span><span class="price-amount">TBD</span><span class="price-period">/ month</span></p>
         <ul>
           <li>Everything in the app. No tiers, no upsells.</li>
-          <li>One PC at a time. Move it to a different one whenever you want.</li>
-          <li>Updates automatically when I ship them.</li>
+          <li>One PC at a time. Move it whenever you want.</li>
+          <li>Updates install themselves when I ship them.</li>
           <li>Email me if anything breaks. I'm the one who built it.</li>
         </ul>
         <a href="#" class="cta-button">Subscribe (coming soon)</a>
@@ -100,7 +156,7 @@
       <p>Yeah. Each overlay is just a browser source. Put them in whatever scenes you want, in any collection. The app controls when they show, so you're not switching scenes constantly.</p>
 
       <h3>What if my internet drops during a race?</h3>
-      <p>Basically nothing happens. The whole thing runs on your PC, so iRacing and OBS keep talking to each other fine. The only stuff that needs internet is the standings scraper (which is optional anyway) and the periodic license check. The license has a 7-day offline buffer so you won't get locked out mid-broadcast.</p>
+      <p>Basically nothing happens. The whole thing runs on your PC, so iRacing and OBS keep talking to each other fine. The only stuff that needs internet is the standings scraper (optional anyway) and the periodic license check, which has a 7-day offline buffer so you won't get locked out mid-broadcast.</p>
 
       <h3>Can I use my own branding?</h3>
       <p>Yeah. Drop your league logo, custom car numbers, helmets, and camera presets into the folders the app shows you. Next session, they show up.</p>
@@ -117,7 +173,7 @@
   </main>
 
   <footer>
-    <span>WTM Broadcasting</span>
+    <span class="footer-brand">WTM<span class="brand-sep">/</span>BROADCASTING</span>
     <span><a href="mailto:hello@wtmbroadcasting.com">hello@wtmbroadcasting.com</a></span>
   </footer>
 
